@@ -1,8 +1,8 @@
 // Start of the complete JavaScript game logic
 let pagehiight = 1200;
 let pagewidth = 640;
-let p1scorer =1000000 ;
-let p2scorer = 1 ;
+let p1scorer =1 ;
+let p2scorer = 100000000000000000000000000000 ;
 // Player 1 (Top Paddle - Green)
 let character = {
     x: pagewidth / 2 - 50, // Center the paddle horizontally
@@ -129,14 +129,6 @@ function resetBall() {
 }
 
 function handleMovement() {
-    // Player 1 movement (Arrow Keys)
-    if (keys["ArrowLeft"]) {
-        character.x -= character.speed;
-    }
-    if (keys["ArrowRight"]) {
-        character.x += character.speed;
-    }
-
     // Player 2 movement (A and D)
     if (keys["a"] || keys["A"]) {
         character2.x -= character2.speed;
@@ -203,3 +195,4 @@ window.addEventListener("keydown", function(event) {
 window.addEventListener("keyup", function(event) {
     keys[event.key] = false;
 });
+
