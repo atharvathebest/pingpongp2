@@ -1,7 +1,7 @@
 // Start of the complete JavaScript game logic
 let pagehiight = 1200;
 let pagewidth = 640;
-let p1scorer =1 ;
+let p1scorer =0 ;
 let p2scorer = 100000000000000000000000000000 ;
 // Player 1 (Top Paddle - Green)
 let character = {
@@ -195,3 +195,4 @@ window.addEventListener("keydown", function(event) {
 window.addEventListener("keyup", function(event) {
     keys[event.key] = false;
 });
+
