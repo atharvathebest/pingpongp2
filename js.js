@@ -131,10 +131,10 @@ function resetBall() {
 function handleMovement() {
     // Player 2 movement (A and D)
     if (keys["a"] || keys["A"]) {
-        character2.x = pingpong.x;
+        character2.x -= character2.speed;
     }
     if (keys["d"] || keys["D"]) {
-        character2.x = pingpong.x;
+        character2.x += character2.speed;
     }
 
     // Clamp Player 1 position
@@ -195,4 +195,3 @@ window.addEventListener("keydown", function(event) {
 window.addEventListener("keyup", function(event) {
     keys[event.key] = false;
 });
-
